@@ -1,3 +1,3 @@
-import fieldNameToLabelMap from "../constants/fieldNameToLabelMap.js";
+import fieldNameToLabelMap from '../constants/fieldNameToLabelMap.js';
 
 export default (name) => fieldNameToLabelMap?.[name] || '';

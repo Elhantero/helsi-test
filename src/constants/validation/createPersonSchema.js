@@ -1,8 +1,8 @@
-import * as yup from "yup";
+import * as yup from 'yup';
 import * as fieldNames from '../fieldNames.js';
-import infoTexts from "../infoTexts.js";
-import * as regExp from "../regExp.js";
-import defaultStringInputSchema from "./defaultStringInputSchema.js";
+import infoTexts from '../infoTexts.js';
+import * as regExp from '../regExp.js';
+import defaultStringInputSchema from './defaultStringInputSchema.js';
 import * as contactMethodIds from '../contactMethodIds.js';
 
 export default yup.object({
