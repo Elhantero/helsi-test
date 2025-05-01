@@ -7,4 +7,5 @@ export default {
   wrongDateFormat: 'Невірний формат дати (дд.мм.рррр)',
   wrongPhoneFormat: 'Невірний формат номера (+38(XXX) XXX XX XX)',
   wrongMailFormat: 'Невірний формат, приклад test@example.com',
+  chooseOptionText: '--Вибрати--',
 };

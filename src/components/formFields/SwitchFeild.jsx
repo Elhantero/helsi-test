@@ -2,7 +2,7 @@ import React from 'react';
 import {Field} from 'react-final-form';
 import {FormControlLabel, Switch} from '@mui/material';
 
-const SwitchFeildCustom = ({name, label}) => {
+const SwitchFeild = ({name, label}) => {
   return (
     <Field name={name}>
       {({input}) => (
@@ -20,4 +20,4 @@ const SwitchFeildCustom = ({name, label}) => {
   );
 };
 
-export default SwitchFeildCustom;
+export default SwitchFeild;

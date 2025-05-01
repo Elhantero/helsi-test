@@ -29,3 +29,11 @@ export const PreBlock = styled.pre`
     box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.2);
     padding: 20px;
 `;
+
+export const PageWrapper = styled.div`
+	display: flex;
+	flex-direction: column;	
+	width: 1260px;
+	margin: 0 auto;
+	gap: 20px;	
+`;

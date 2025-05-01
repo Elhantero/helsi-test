@@ -1,42 +1,11 @@
-import React, {memo, forwardRef} from 'react';
+import React, {memo} from 'react';
 import {useField} from 'react-final-form';
 import {InputAdornment} from '@mui/material';
-import {TextField} from '@mui/material';
+import {TextField as TextFieldMUI} from '@mui/material';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
-import { IMaskInput } from 'react-imask';
+import MaskInput from '../common/MaskInput.jsx';
 
-const DateMaskInput = forwardRef(function DateMaskInput(props, ref) {
-  const { onChange, ...other } = props;
-
-  let mask = String;
-  let placeholder = '';
-
-  if(props.name === 'dateOfBirth') {
-    mask = '00.00.0000';
-    placeholder = 'дд.мм.рррр';
-  }
-  if(props.name === 'phone') {
-    mask='+{38}(000) 000 00 00';
-    placeholder='+38(xxx) xxx xx xx';
-  }
-
-  const handleChange = (maskedValue) => {
-    const trimmedValue = maskedValue.trim();
-    onChange({ target: { value: trimmedValue } });
-  };
-
-  return (
-    <IMaskInput
-      {...other}
-      mask={mask}
-      placeholder={placeholder}
-      inputRef={ref}
-      onAccept={handleChange}
-    />
-  );
-});
-
-const TextFieldCustom = memo(({name, label}) => {
+const TextField = memo(({name, label}) => {
   const {
     input,
     meta: {touched, error},
@@ -50,7 +19,7 @@ const TextFieldCustom = memo(({name, label}) => {
   });
 
   return (
-    <TextField
+    <TextFieldMUI
       {...input}
       fullWidth
       label={label}
@@ -58,7 +27,7 @@ const TextFieldCustom = memo(({name, label}) => {
       helperText={touched && error}
       variant="standard"
       InputProps={{
-        inputComponent: DateMaskInput,
+        inputComponent: MaskInput,
         endAdornment: touched && error && (
           <InputAdornment position="end">
             <ErrorOutlineIcon color="error" />
@@ -87,4 +56,4 @@ const TextFieldCustom = memo(({name, label}) => {
   );
 });
 
-export default TextFieldCustom;
+export default TextField;

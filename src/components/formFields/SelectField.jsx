@@ -1,6 +1,6 @@
 import React from 'react';
-import { Field } from 'react-final-form';
-import { FormControl, InputLabel, Select, MenuItem, InputAdornment, FormHelperText } from '@mui/material';
+import {Field} from 'react-final-form';
+import {FormControl, InputLabel, Select, MenuItem, FormHelperText} from '@mui/material';
 
 const SelectField = ({ name, label, options }) => {
   return (
