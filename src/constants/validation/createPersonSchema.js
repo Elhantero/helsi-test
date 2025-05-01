@@ -19,7 +19,7 @@ export default yup.object({
       then: (schema) =>
         schema
           .min(2, infoTexts.min2Symbols)
-          .matches(regExp.onlyCyrrilicWithSpaceDash, infoTexts.onlyCyrrilicSpaceDash)
+          .matches(regExp.defaultStringInputFormat, infoTexts.onlyCyrrilicSpaceDash)
           .required(infoTexts.requiredField),
       otherwise: (schema) => schema.notRequired(),
     }),
@@ -31,7 +31,7 @@ export default yup.object({
         schema
           .min(10)
           .max(10)
-          .matches(regExp.only10Digits, infoTexts.ipnMustHave10Digits)
+          .matches(regExp.ipnFormat, infoTexts.ipnMustHave10Digits)
           .required(infoTexts.requiredField),
       otherwise: (schema) => schema.notRequired(),
     }),
@@ -64,4 +64,7 @@ export default yup.object({
     }),
   [fieldNames.secretQuestion]: yup
     .string()
+    .required(infoTexts.requiredField)
+    .min(6, infoTexts.min6ymbols)
+    .matches(regExp.secretQuestionFormat, infoTexts.onlySymbolsDigits),
 });

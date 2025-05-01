@@ -8,4 +8,6 @@ export default {
   wrongPhoneFormat: 'Невірний формат номера (+38(XXX) XXX XX XX)',
   wrongMailFormat: 'Невірний формат, приклад test@example.com',
   chooseOptionText: '--Вибрати--',
+  min6ymbols: 'Мінімум 6 символів',
+  onlySymbolsDigits: 'Допустимі лише букви та цифри',
 };

@@ -6,7 +6,7 @@ export default yup
   .string()
   .min(2, infoTexts.min2Symbols)
   .matches(
-    regExp.onlyCyrrilicWithSpaceDash,
+    regExp.defaultStringInputFormat,
     infoTexts.onlyCyrrilicSpaceDash,
   )
   .test(
