@@ -1,12 +1,67 @@
-# React + Vite
+# 💢 Helsi Test App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a test project built to demonstrate proficiency with React, forms, validation, and a modern front-end stack.
 
-Currently, two official plugins are available:
+## 💪 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [React 18](https://react.dev/)
+- [Vite](https://vitejs.dev/) — Lightning-fast bundler
+- [React Final Form](https://final-form.org/react) — Form state management
+- [Yup](https://github.com/jquense/yup) — Schema-based validation
+- [MUI v7](https://mui.com/) — Material Design UI components
+- [IMask](https://imask.js.org/) — Input masking
+- [ESLint](https://eslint.org/) — Code linting
 
-## Expanding the ESLint configuration
+## 📦 Installation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+or
+
+```bash
+yarn
+```
+
+## 🚀 Run Development Server
+
+```bash
+npm run dev
+```
+
+## 🔮 Lint the Code
+
+```bash
+npm run lint
+```
+
+## 🏗 Build for Production
+
+```bash
+npm run build
+```
+
+## ⚙️ Key Features
+
+- Dynamic form validation and input masking based on selected document type
+- Support for Cyrillic letters, numbers, and conditional fields
+- Smooth scrolling to specific form sections
+- Modular Yup schema validation
+
+## 📁 Project Structure (Example)
+
+```
+/src
+  /components
+    MaskedInput.tsx
+  /schemas
+    documentSchema.ts
+    personalInfoSchema.ts
+  App.tsx
+  main.tsx
+```
+
+## ✍️ Author
+
+Test task for [Helsi](https://helsi.me)
