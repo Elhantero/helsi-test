@@ -5,7 +5,7 @@ import {InputAdornment} from '@mui/material';
 import {TextField as TextFieldMUI} from '@mui/material';
 import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 import MaskInput from '../common/MaskInput.jsx';
-import * as fieldNames from '../../constants/fields/fieldNames.js';
+import getFieldDisabledStatus from '../../helpers/getFieldDisabledStatus.js';
 
 const TextField = memo(({name, label}) => {
   const {
@@ -19,11 +19,14 @@ const TextField = memo(({name, label}) => {
       active: true
     },
   });
+  const { values } = useFormState();
+  const disabled = getFieldDisabledStatus(name, values);
 
   return (
     <TextFieldMUI
       {...input}
       fullWidth
+      disabled={disabled}
       label={label}
       error={touched && Boolean(error)}
       helperText={touched && error}
