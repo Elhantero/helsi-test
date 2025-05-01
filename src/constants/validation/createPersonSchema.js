@@ -4,6 +4,9 @@ import infoTexts from '../infoTexts.js';
 import * as regExp from '../regExp.js';
 import defaultStringInputSchema from './defaultStringInputSchema.js';
 import * as contactMethodIds from '../contactMethodIds.js';
+import {documentType} from "../fieldNames.js";
+import * as documentsIds from '../documentIds.js'
+import {idCardPassportNumberFormat} from "../regExp.js";
 
 export default yup.object({
   [fieldNames.secondName]: defaultStringInputSchema.required(infoTexts.requiredField),
@@ -29,8 +32,6 @@ export default yup.object({
       is: true,
       then: (schema) =>
         schema
-          .min(10)
-          .max(10)
           .matches(regExp.ipnFormat, infoTexts.ipnMustHave10Digits)
           .required(infoTexts.requiredField),
       otherwise: (schema) => schema.notRequired(),
@@ -40,8 +41,10 @@ export default yup.object({
     .required(infoTexts.requiredField)
     .matches(regExp.dateFormat, infoTexts.wrongDateFormat),
   [fieldNames.gender]:yup
-    .string()
+    .number()
     .required(infoTexts.requiredField),
+  [fieldNames.preferedContactMethod]:yup
+    .number(),
   [fieldNames.phone]: yup
     .string()
     .matches(regExp.phoneFormat, infoTexts.wrongPhoneFormat)
@@ -67,4 +70,47 @@ export default yup.object({
     .required(infoTexts.requiredField)
     .min(6, infoTexts.min6ymbols)
     .matches(regExp.secretQuestionFormat, infoTexts.onlySymbolsDigits),
+  [fieldNames.documentType]: yup
+    .number()
+    .required(infoTexts.chooseDocType),
+  [fieldNames.docSeriaNumber]: yup
+    .string()
+    .required(infoTexts.docNumberRequired)
+    .when(fieldNames.documentType, {
+      is: documentsIds.defaultPassport,
+      then: (schema) =>
+        schema.matches(
+          regExp.defaultUAPassportFormat,
+          infoTexts.defaultUAPassportFormat
+        ),
+      otherwise: (schema) =>
+        schema.when(fieldNames.documentType, {
+          is: documentsIds.idCartPassport, // ID-карта
+          then: (schema) =>
+            schema.matches(
+              regExp.idCardPassportNumberFormat,
+              infoTexts.idCardPassportFormat
+            ),
+          otherwise: (schema) =>
+            schema.matches(
+              regExp.defaultUAOtherDocsFormat,
+              infoTexts.defaultUAOtherDocsFormat
+            ),
+        }),
+    }),
+  [fieldNames.UNZR]: yup
+    .string()
+    .when(fieldNames.documentType, {
+      is: documentsIds.idCartPassport, // ID-карта
+      then: (schema) =>
+        schema
+          .required(infoTexts.unzrRequired)
+          .matches(
+            regExp.unzrFormat,
+            infoTexts.unzrFormat
+          ),
+      otherwise: (schema) => schema.notRequired(),
+    }),
+
+
 });

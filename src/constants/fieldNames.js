@@ -12,5 +12,9 @@ export const preferedContactMethod = 'preferedContactMethod';
 export const phone = 'phone';
 export const email = 'email';
 export const secretQuestion = 'secretQuestion';
+export const documentType = 'documentType';
+export const docSeriaNumber = 'docSeriaNumber';
+export const UNZR = 'UNZR';
+
 
 

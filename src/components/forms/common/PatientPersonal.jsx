@@ -12,10 +12,10 @@ import genderOptionsOrder from '../../../constants/genderOptionsOrder.js';
 import genderOptionsData from '../../../constants/genderOptionsData.js';
 import selectOptionsCreator from '../../../helpers/selectOptionsCreator.js';
 
-const PatientPersonalData = () => {
+const PatientPersonal = () => {
   return (
     <>
-      <Typography variant="h5" sx={{ mb: -3 }}>Дані пацієнта</Typography>
+      <Typography variant="h5" sx={{ mb: -3, fontWeight: 'bold' }}>Дані пацієнта</Typography>
 
       <Container cols={3}>
         <TextField name={fieldNames.secondName} label={getLabelByFieldName(fieldNames.secondName)} />
@@ -52,4 +52,4 @@ const PatientPersonalData = () => {
   );
 };
 
-export default PatientPersonalData;
+export default PatientPersonal;

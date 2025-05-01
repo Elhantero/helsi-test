@@ -6,7 +6,8 @@ import schema from '../../../constants/validation/createPersonSchema.js';
 import validator from '../../../helpers/validator.js';
 import {PreBlock} from '../../common/styled/index.js';
 import FormDependenciesManager from '../FormDependenciesManager.jsx';
-import PatientPersonalData from '../common/PatientPersonalData.jsx';
+import PatientPersonal from '../common/PatientPersonal.jsx';
+import PatientDocument from '../common/PatientDocument.jsx';
 
 const initialValues = {
   [fieldNames.withMiddleName]: true,
@@ -25,7 +26,8 @@ const CreatePatientForm = () => {
       render={({handleSubmit}) => (
         <form onSubmit={handleSubmit} noValidate>
           <FormDependenciesManager/>
-          <PatientPersonalData/>
+          <PatientPersonal/>
+          <PatientDocument/>
           <Button type="submit" variant="contained" sx={{ mt: 5 }}>Зберегти</Button>
           {showJSON && (
             <FormSpy subscription={{values: true}}>

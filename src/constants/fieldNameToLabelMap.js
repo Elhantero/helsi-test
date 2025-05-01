@@ -12,4 +12,7 @@ export default {
   [fieldNames.phone]: 'Контактний номер телефону',
   [fieldNames.email]: 'Адреса електронної почти',
   [fieldNames.secretQuestion]: 'Секретне слово (не менше 6 символів)',
+  [fieldNames.documentType]: 'Тип документу',
+  [fieldNames.docSeriaNumber]: 'Серія(за наявності), номер',
+  [fieldNames.UNZR]: 'Запис № (УНЗР)',
 };

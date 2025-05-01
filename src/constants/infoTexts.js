@@ -10,4 +10,11 @@ export default {
   chooseOptionText: '--Вибрати--',
   min6ymbols: 'Мінімум 6 символів',
   onlySymbolsDigits: 'Допустимі лише букви та цифри',
+  chooseDocType: 'Оберіть тип документу',
+  docNumberRequired: 'Номер документу обовʼязковий',
+  defaultUAPassportFormat: 'Формат укр. паспорта: 2 українські літери та 6 цифр',
+  defaultUAOtherDocsFormat: 'Формат: 3 українські літери та від 5 до 9 цифр',
+  idCardPassportFormat: 'Формат ID-карти: 9 цифр',
+  unzrRequired: 'УНЗР обовʼязковий для ID-карти',
+  unzrFormat: 'Формат УНЗР: 10 цифр, дефіс, 5 цифр (напр. 1234567890-12345)',
 };
