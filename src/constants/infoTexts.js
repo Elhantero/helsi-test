@@ -17,4 +17,7 @@ export default {
   idCardPassportFormat: 'Формат ID-карти: 9 цифр',
   unzrRequired: 'УНЗР обовʼязковий для ID-карти',
   unzrFormat: 'Формат УНЗР: 10 цифр, дефіс, 5 цифр (напр. 1234567890-12345)',
+  noIPN: 'Немає РНОКПП (ІПН)',
+  noMiddleName: 'Немає по батькові',
+  idCardNotSelected: 'Запис № (УНЗР), потрібно вибрати ID-картку'
 };

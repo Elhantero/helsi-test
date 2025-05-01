@@ -16,10 +16,10 @@ export const InputWithSwitchWrapper = styled.div`
 
 export const Container = styled.div`
 	display: grid;
-	width: 1260px;
 	grid-template-columns: repeat(${props => (props.cols ? props.cols : 2)}, 1fr);
 	grid-gap: 40px;
 	margin-top: 40px;	
+	padding: 0 15px;	
 `;
 
 export const PreBlock = styled.pre`
@@ -31,9 +31,15 @@ export const PreBlock = styled.pre`
 `;
 
 export const PageWrapper = styled.div`
-	display: flex;
-	flex-direction: column;	
-	width: 1260px;
+	width: 1300px;
 	margin: 0 auto;
-	gap: 20px;	
+	outline: 1px solid #adb2b7;
+`;
+
+export const FormWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	gap: 20px;
+	padding: 20px;	
 `;
