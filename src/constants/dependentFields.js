@@ -1,5 +1,5 @@
-import * as fieldNames from './fieldNames.js';
-import * as documentIds from './documentIds.js';
+import * as fieldNames from './fields/fieldNames.js';
+import * as documentIds from './documents/documentIds.js';
 export const dependentFields = [
   {
     watchKey: fieldNames.withMiddleName,

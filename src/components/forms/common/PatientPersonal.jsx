@@ -1,15 +1,15 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 import {Container, InputWithSwitchWrapper} from '../../common/styled/index.js';
-import * as fieldNames from '../../../constants/fieldNames.js';
+import * as fieldNames from '../../../constants/fields/fieldNames.js';
 import getLabelByFieldName from '../../../helpers/getLabelByFieldName.js';
 import TextField from '../../formFields/TextField.jsx';
 import SwitchFeild from '../../formFields/SwitchFeild.jsx';
 import SelectField from '../../formFields/SelectField.jsx';
-import contactMethodOptionsOrder from '../../../constants/genderOptionsOrder.js';
-import contactMethodOptionsData from '../../../constants/contactMethodOptionsData.js';
-import genderOptionsOrder from '../../../constants/genderOptionsOrder.js';
-import genderOptionsData from '../../../constants/genderOptionsData.js';
+import contactMethodOptionsOrder from '../../../constants/genders/genderOptionsOrder.js';
+import contactMethodOptionsData from '../../../constants/contacts/contactMethodOptionsData.js';
+import genderOptionsOrder from '../../../constants/genders/genderOptionsOrder.js';
+import genderOptionsData from '../../../constants/genders/genderOptionsData.js';
 import selectOptionsCreator from '../../../helpers/selectOptionsCreator.js';
 
 const PatientPersonal = () => {

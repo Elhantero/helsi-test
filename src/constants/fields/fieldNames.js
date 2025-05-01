@@ -15,6 +15,9 @@ export const secretQuestion = 'secretQuestion';
 export const documentType = 'documentType';
 export const docSeriaNumber = 'docSeriaNumber';
 export const UNZR = 'UNZR';
+export const docDateStart = 'docDateStart';
+export const docDateEnd = 'docDateEnd';
+export const docCreator = 'docCreator';
 
 
 

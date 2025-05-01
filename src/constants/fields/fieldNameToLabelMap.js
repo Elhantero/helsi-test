@@ -15,4 +15,7 @@ export default {
   [fieldNames.documentType]: 'Тип документу',
   [fieldNames.docSeriaNumber]: 'Серія(за наявності), номер',
   [fieldNames.UNZR]: 'Запис № (УНЗР)',
+  [fieldNames.docDateStart]: 'Коли видано',
+  [fieldNames.docDateEnd]: 'Діє до',
+  [fieldNames.docCreator]: 'Ким видано',
 };

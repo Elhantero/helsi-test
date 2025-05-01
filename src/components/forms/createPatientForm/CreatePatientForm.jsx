@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import {Form, FormSpy} from 'react-final-form';
 import Button from '@mui/material/Button';
-import * as fieldNames from '../../../constants/fieldNames.js';
-import schema from '../../../constants/validation/createPersonSchema.js';
+import * as fieldNames from '../../../constants/fields/fieldNames.js';
+import schema from '../../../constants/validationSchemas/createPersonSchema.js';
 import validator from '../../../helpers/validator.js';
 import {PreBlock} from '../../common/styled/index.js';
 import FormDependenciesManager from '../FormDependenciesManager.jsx';
